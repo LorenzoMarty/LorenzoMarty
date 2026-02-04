@@ -2,7 +2,7 @@
 
 > **Engenharia de IA focada em produtos reais, RAG, LLMs e sistemas educacionais inteligentes.**
 
-Sou desenvolvedor com foco em **Engenharia de Inteligência Artificial**, atuando na criação de **aplicações práticas com LLMs**, **RAG (Retrieval-Augmented Generation)** e **arquiteturas modernas** para resolver problemas reais.
+Sou desenvolvedor com foco em **Engenharia de Inteligência Artificial**, atuando na criação de **aplicações práticas com LLMs**, **RAG** e **arquiteturas modernas** para resolver problemas reais.
 
 Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de software** e **educação**, com foco em qualidade, controle de alucinação e boa experiência do usuário.
 
@@ -11,8 +11,8 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 ## 🚀 Principais competências
 
 ### 🧠 Inteligência Artificial & LLMs
-- Aplicação prática de **LLMs (OpenAI)**
-- **RAG (Retrieval-Augmented Generation)** com controle de contexto
+- Aplicação prática de **LLMs**
+- **RAG** com controle de contexto
 - Engenharia de prompts orientada a tarefas
 - Geração estruturada (JSON) e validação de respostas
 - Mitigação de alucinação em sistemas educacionais
@@ -33,7 +33,6 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 - **Python** (principal)
 - **Streamlit** para aplicações web rápidas
 - **LangChain** para orquestração de IA
-- **ChromaDB** para bases vetoriais
 - APIs REST e integração com serviços externos
 
 ---
