@@ -79,4 +79,4 @@ Atuar como **Engenheiro de IA / AI Engineer**, desenvolvendo sistemas que:
 
 ---
 
-> *“Não programo sistemas, desenvolvo soluções.”*
+> *“Não programo sistemas, desenvolvo soluções.” - Lorenzo Marty*
