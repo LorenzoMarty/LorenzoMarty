@@ -66,7 +66,7 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 ## 🎯 Objetivo profissional
 
 Atuar como **Engenheiro de IA / AI Engineer**, desenvolvendo sistemas que:
-- Usem IA de forma responsável
+- Usem IA de forma criativa e responsável
 - Se integrem bem a produtos reais
 - Gerem valor mensurável para usuários
 
@@ -79,4 +79,4 @@ Atuar como **Engenheiro de IA / AI Engineer**, desenvolvendo sistemas que:
 
 ---
 
-> *“IA não é sobre responder qualquer coisa, é sobre responder certo.”*
+> *“Não programo sistemas, desenvolvo soluções.”*
