@@ -31,8 +31,8 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 
 ### 💻 Desenvolvimento
 - **Python** (principal)
-- **Streamlit** para aplicações web rápidas
-- **LangChain** para orquestração de IA
+- **Vibe Design** para interfaces web
+- **LangChain e Agno** para orquestração de IA
 - APIs REST e integração com serviços externos
 
 ---
