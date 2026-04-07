@@ -1,39 +1,18 @@
-# 👨‍💻 Lorenzo Marty — Engenharia de IA aplicada
+# 👨‍💻 Lorenzo Marty — Engenheiro de IA aplicada / Desenvolvedor Python
 
-> **Engenharia de IA focada em produtos reais, RAG, LLMs e sistemas educacionais inteligentes.**
+> **Engenharia de IA focada em produtos reais, RAG, LLMs e sistemas Saas.**
 
 Sou desenvolvedor com foco em **Engenharia de Inteligência Artificial**, atuando na criação de **aplicações práticas com LLMs**, **RAG** e **arquiteturas modernas** para resolver problemas reais.
 
-Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de software** e **educação**, com foco em qualidade, controle de alucinação e boa experiência do usuário.
+Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de software** e **Saas**, com foco em qualidade, controle de alucinação e boa experiência do usuário.
 
 ---
 
-## 🚀 Principais competências
-
-### 🧠 Inteligência Artificial & LLMs
-- Aplicação prática de **LLMs**
-- **RAG** com controle de contexto
-- Engenharia de prompts orientada a tarefas
-- Geração estruturada (JSON) e validação de respostas
-- Mitigação de alucinação em sistemas educacionais
-
-### 🏗️ Arquitetura de Sistemas
-- Separação clara entre **UI, lógica de IA e persistência**
-- Design modular e escalável
-- Persistência de dados (SQLite / SQL)
-- Controle de estado e histórico de usuários
-
-### 📚 IA aplicada à Educação
-- Geração automática de simulados
-- Correção e feedback explicativo
-- Sistemas baseados no **material do usuário**
-- Experiência de estudo orientada a desempenho
-
-### 💻 Desenvolvimento
-- **Python** (principal)
-- **Vibe Design** para interfaces web
-- **LangChain e Agno** para orquestração de IA
-- APIs REST e integração com serviços externos
+### 💻 Tecnologias
+- **Python**
+- **FastAPI**
+- **Django**
+- **LangChain e Agno**
 
 ---
 
@@ -60,12 +39,13 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 - Prezo por **confiabilidade**, não só criatividade
 - Experiência prática com **pipelines completos de IA**
 - Documentação clara e código organizado
+- Atenção em detalhes
 
 ---
 
 ## 🎯 Objetivo profissional
 
-Atuar como **Engenheiro de IA / AI Engineer**, desenvolvendo sistemas que:
+Atuar como **Engenheiro de IA / Desenvolvedor Python**, desenvolvendo sistemas que:
 - Usem IA de forma criativa e responsável
 - Se integrem bem a produtos reais
 - Gerem valor mensurável para usuários
