@@ -1,25 +1,60 @@
 # 👋 Hi, I'm Lorenzo
 
-AI Engineer focused on building real-world intelligent systems using LLMs, RAG pipelines, and automation.
+### AI Engineer building real-world intelligent systems
 
-## 🚀 What I do
-- Build AI-powered products (chatbots, summarization, automation)
-- Design RAG pipelines (documents, websites, video)
-- Focus on reliability, performance and real use cases
+I focus on creating **practical AI solutions** using LLMs, RAG pipelines, and automation — always prioritizing **performance, reliability, and real-world impact**.
 
-## 🧠 Main Stack
-Python • OpenAI • LangChain • Agno • Qdrant • Streamlit • Django
+---
+
+## 🚀 What I Do
+
+* 🧠 Build AI-powered products (chatbots, summarization, automation)
+* 🔎 Design RAG pipelines (documents, websites, YouTube)
+* ⚙️ Engineer systems focused on reliability and performance
+* 🚀 Turn ideas into real, usable products
+
+---
+
+## 🧰 Tech Stack
+
+**Languages & Core**
+Python
+
+**AI & LLM**
+OpenAI • LangChain • Agno
+
+**Data & Retrieval**
+Qdrant • RAG Pipelines
+
+**Backend & Apps**
+Django • Streamlit
+
+---
 
 ## 📌 Featured Projects
 
 ### 🧠 Oráculo Chatbot
-RAG-based chatbot that answers questions using files, websites and YouTube as context.
+
+AI-powered chatbot using RAG to answer questions based on **files, websites, and YouTube content**.
 
 ### 🎙️ Transcripty
-AI tool that records meetings, transcribes and generates structured summaries.
+
+Tool that **records meetings, transcribes audio, and generates structured insights** using AI.
 
 ### ⚖️ Agenda Juri
-Full-stack legal management system with clients, cases and scheduling.
+
+Full-stack legal management system with **clients, cases, and scheduling workflows**.
+
+---
 
 ## 📫 Contact
-LinkedIn / Email
+
+* 📧 Email: **[lorenzodreis@gmail.com](mailto:lorenzodreis@gmail.com)**
+* 💼 LinkedIn: https://www.linkedin.com/in/lorenzo-marty/
+
+---
+
+## ⚡ About Me
+
+I’m focused on becoming a **high-level AI Engineer**, building systems that go beyond prototypes —
+with real usability, structured architecture, and scalable thinking.
