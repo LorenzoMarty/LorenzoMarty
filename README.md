@@ -1,60 +1,87 @@
-# 👋 Hi, I'm Lorenzo
+<h1 align="center">Lorenzo Marty</h1>
 
-### AI Engineer building real-world intelligent systems
-
-I focus on creating **practical AI solutions** using LLMs, RAG pipelines, and automation — always prioritizing **performance, reliability, and real-world impact**.
-
----
-
-## 🚀 What I Do
-
-* 🧠 Build AI-powered products (chatbots, summarization, automation)
-* 🔎 Design RAG pipelines (documents, websites, YouTube)
-* ⚙️ Engineer systems focused on reliability and performance
-* 🚀 Turn ideas into real, usable products
+<p align="center">
+AI Engineer focused on building real-world intelligent systems
+</p>
 
 ---
 
-## 🧰 Tech Stack
+<p align="center">
+I build AI-powered applications using LLMs, RAG pipelines and automation,  
+with a strong focus on reliability, performance and real-world use.
+</p>
 
-**Languages & Core**
+---
+
+## About
+
+* Computer Science student
+* Based in Brazil
+* Focused on AI systems, not just prototypes
+* Interested in building scalable and practical solutions
+
+---
+
+## Core Work
+
+* Development of AI-powered applications (chatbots, summarization, automation)
+* Design of RAG pipelines (documents, websites, YouTube)
+* System architecture focused on reliability and usability
+
+---
+
+## Tech Stack
+
+**Languages**
+
+```
 Python
+```
 
-**AI & LLM**
+**AI / LLM**
+
+```
 OpenAI • LangChain • Agno
+```
 
 **Data & Retrieval**
+
+```
 Qdrant • RAG Pipelines
+```
 
 **Backend & Apps**
+
+```
 Django • Streamlit
+```
 
 ---
 
-## 📌 Featured Projects
+## Selected Projects
 
-### 🧠 Oráculo Chatbot
+### Oráculo Chatbot
 
-AI-powered chatbot using RAG to answer questions based on **files, websites, and YouTube content**.
+RAG-based chatbot that answers questions using files, websites and YouTube as context.
 
-### 🎙️ Transcripty
+### Transcripty
 
-Tool that **records meetings, transcribes audio, and generates structured insights** using AI.
+AI system that records meetings, transcribes audio and generates structured summaries.
 
-### ⚖️ Agenda Juri
+### Agenda Juri
 
-Full-stack legal management system with **clients, cases, and scheduling workflows**.
-
----
-
-## 📫 Contact
-
-* 📧 Email: **[lorenzodreis@gmail.com](mailto:lorenzodreis@gmail.com)**
-* 💼 LinkedIn: https://www.linkedin.com/in/lorenzo-marty/
+Full-stack legal management system with client management, case tracking and scheduling.
 
 ---
 
-## ⚡ About Me
+## Contact
 
-I’m focused on becoming a **high-level AI Engineer**, building systems that go beyond prototypes —
-with real usability, structured architecture, and scalable thinking.
+Email: [lorenzodreis@gmail.com](mailto:lorenzodreis@gmail.com)
+LinkedIn: https://www.linkedin.com/in/lorenzo-marty/
+
+---
+
+## Focus
+
+Currently focused on becoming a high-level AI Engineer,
+building systems that go beyond prototypes and deliver real value.
