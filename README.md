@@ -16,22 +16,6 @@ Atualmente desenvolvo projetos que unem **IA aplicada**, **engenharia de softwar
 
 ---
 
-## 🧪 Projeto em destaque
-
-### 🎓 Futurizar — Banco Inteligente de Questões ENEM com IA
-> Plataforma educacional que gera, corrige e explica simulados ENEM com base no próprio material do aluno.
-
-**Destaques técnicos:**
-- RAG com PDFs/TXTs indexados por matéria
-- Geração de questões no estilo ENEM (A–E)
-- Correção automática + feedback explicativo
-- Persistência de histórico para revisão
-- Arquitetura limpa e modular
-
-🔗 Repositório: https://github.com/LorenzoMarty/Futurizar
-
----
-
 ## 📌 Diferenciais como Engenheiro de IA
 
 - Penso em **produto**, não apenas em modelo
