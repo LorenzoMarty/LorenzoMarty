@@ -1,60 +1,52 @@
-<h1 align="center">Lorenzo Marty</h1>
+<h2 align="center">
+    Hello, I'm <b>Lorenzo Marty</b>
+</h2>
 
 <p align="center">
-AI Engineer focused on building real-world intelligent systems
+    AI Engineer • LLM Systems • RAG Pipelines
+</p>
+
+<p align="center">
+    <samp>
+        Building intelligent systems focused on real-world applications<br>
+        Computer Science student<br>
+        Santa Maria, Brazil
+    </samp>
 </p>
 
 ---
 
-<p align="center">
-I build AI-powered applications using LLMs, RAG pipelines and automation,  
-with a strong focus on reliability, performance and real-world use.
-</p>
+## Profile
 
----
-
-## About
-
-* Computer Science student
-* Based in Brazil
-* Focused on AI systems, not just prototypes
-* Interested in building scalable and practical solutions
+I build AI-powered systems using LLMs, focusing on practical applications rather than prototypes.
+My work involves retrieval pipelines, automation, and structured AI systems with attention to performance and reliability.
 
 ---
 
 ## Core Work
 
-* Development of AI-powered applications (chatbots, summarization, automation)
-* Design of RAG pipelines (documents, websites, YouTube)
-* System architecture focused on reliability and usability
+* AI-powered applications (chatbots, summarization, automation)
+* Retrieval-Augmented Generation (RAG) pipelines
+* Processing of documents, websites and video data
+* System design focused on usability and performance
 
 ---
 
 ## Tech Stack
 
-**Languages**
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-000000?style=flat-square&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-121212?style=flat-square" />
+  <img src="https://img.shields.io/badge/Agno-2E2E2E?style=flat-square" />
+  <img src="https://img.shields.io/badge/Qdrant-FF4C4C?style=flat-square" />
+  <img src="https://img.shields.io/badge/RAG-555555?style=flat-square" />
+</p>
 
-```
-Python
-```
-
-**AI / LLM**
-
-```
-OpenAI • LangChain • Agno
-```
-
-**Data & Retrieval**
-
-```
-Qdrant • RAG Pipelines
-```
-
-**Backend & Apps**
-
-```
-Django • Streamlit
-```
+<p>
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
+</p>
 
 ---
 
@@ -76,12 +68,18 @@ Full-stack legal management system with client management, case tracking and sch
 
 ## Contact
 
-Email: [lorenzodreis@gmail.com](mailto:lorenzodreis@gmail.com)
-LinkedIn: https://www.linkedin.com/in/lorenzo-marty/
+<p>
+  <a href="mailto:lorenzodreis@gmail.com">lorenzodreis@gmail.com</a>
+</p>
+
+<p>
+  <a href="https://www.linkedin.com/in/lorenzo-marty/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Lorenzo_Marty-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
 
 ---
 
 ## Focus
 
-Currently focused on becoming a high-level AI Engineer,
-building systems that go beyond prototypes and deliver real value.
+Currently focused on building production-level AI systems that go beyond experimentation and deliver real value.
