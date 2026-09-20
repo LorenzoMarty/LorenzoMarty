@@ -18,28 +18,7 @@ Since 2026 I've been a research fellow at a robotics company, building Python ba
 
 *My commit graph only shows part of the story: much of my work lives in private and organization repositories, in design docs and in decisions. So I keep a dated log, one entry per work session. Each building is a month, each star a day I logged. \* month to date.*
 
-<img src="assets/ch3.svg" alt="Chapter 3: Signature Technique" width="100%">
-
-Every LLM feature gets a trace, a cost number and an audit step before it ships. The correction pipeline of [Donc](https://github.com/LorenzoMarty/Donc), my ENEM essay platform:
-
-```mermaid
-flowchart LR
-    A([Student essay]) --> B[Celery queue]
-    B --> C[Specialized agents<br/>theme · thesis · argumentation<br/>repertoire · grammar]
-    C --> D[Score per competency]
-    D --> E{Elimination gate}
-    E --> F[Score audit]
-    F --> G([Feedback + study plan])
-    C -.-> T[(Langfuse traces<br/>+ cost in BRL)]
-    D -.-> T
-    F -.-> T
-    classDef flow fill:#fbfbf8,stroke:#0d0d0d,stroke-width:2px,color:#0d0d0d;
-    classDef obs fill:#d6d6d1,stroke:#0d0d0d,stroke-dasharray:4 3,color:#0d0d0d;
-    class A,B,C,D,E,F,G flow;
-    class T obs;
-```
-
-<img src="assets/ch4.svg" alt="Chapter 4: Story Arcs" width="100%">
+<img src="assets/ch3.svg" alt="Chapter 3: Story Arcs" width="100%">
 
 | | Arc | What it does | Stack |
 |:-:|---|---|---|
@@ -52,7 +31,7 @@ flowchart LR
 
 *● live · ◐ client work · ○ public · ⊘ private · ◌ in design*
 
-<img src="assets/ch5.svg" alt="Chapter 5: Loadout and Next Arc" width="100%">
+<img src="assets/ch4.svg" alt="Chapter 4: Loadout and Next Arc" width="100%">
 
 ![Python](https://img.shields.io/badge/-Python-111111?style=flat-square&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/-FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white) ![Django](https://img.shields.io/badge/-Django-111111?style=flat-square&logo=django&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-111111?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/-Redis-111111?style=flat-square&logo=redis&logoColor=white) ![Celery](https://img.shields.io/badge/-Celery-111111?style=flat-square&logo=celery&logoColor=white) ![OpenAI](https://img.shields.io/badge/-OpenAI-111111?style=flat-square&logo=openai&logoColor=white) ![Prometheus](https://img.shields.io/badge/-Prometheus-111111?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/-Grafana-111111?style=flat-square&logo=grafana&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-111111?style=flat-square&logo=typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/-Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/-React-111111?style=flat-square&logo=react&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-111111?style=flat-square&logo=docker&logoColor=white)
 
