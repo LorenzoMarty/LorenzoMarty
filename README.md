@@ -31,14 +31,6 @@ Since 2026 I've been a research fellow at a robotics company, building Python ba
 
 *● live · ◐ client work · ○ public · ⊘ private · ◌ in design*
 
-<img src="assets/ch4.svg" alt="Chapter 4: Loadout and Next Arc" width="100%">
+<img src="assets/ch4.svg" alt="Chapter 4: Loadout" width="100%">
 
 ![Python](https://img.shields.io/badge/-Python-111111?style=flat-square&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/-FastAPI-111111?style=flat-square&logo=fastapi&logoColor=white) ![Django](https://img.shields.io/badge/-Django-111111?style=flat-square&logo=django&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-111111?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/-Redis-111111?style=flat-square&logo=redis&logoColor=white) ![Celery](https://img.shields.io/badge/-Celery-111111?style=flat-square&logo=celery&logoColor=white) ![OpenAI](https://img.shields.io/badge/-OpenAI-111111?style=flat-square&logo=openai&logoColor=white) ![Prometheus](https://img.shields.io/badge/-Prometheus-111111?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/-Grafana-111111?style=flat-square&logo=grafana&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-111111?style=flat-square&logo=typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/-Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/-React-111111?style=flat-square&logo=react&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-111111?style=flat-square&logo=docker&logoColor=white)
-
-**Focus:** LLM applications and agents · RAG · observability (OpenTelemetry, Prometheus, Grafana, Langfuse) · async pipelines · API design
-
-| Now | Next arc | Endgame |
-|---|---|---|
-| Building Donc and the data foundation for RastroAI | Evaluation, tracing and cost control for LLM apps, in production | AI and data engineer at mid-level: reliable LLM systems, measured end to end |
-
-<p align="center"><b><i>To be continued…</i></b></p>
