@@ -1,7 +1,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Lorenzo Marty — AI & LLMOps engineer. Manga-style cover with a night skyline and one window still lit." width="100%"></p>
 
 <p align="center">
-  Santa Maria, Brazil · Internet Systems student at UFSM · research fellow at a robotics company<br>
+  Santa Maria, Brazil · Internet Systems student at UFSM · Python developer at a robotics company<br>
   <a href="https://www.linkedin.com/in/lorenzo-marty/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-lorenzo--marty-111111?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="mailto:lorenzodreis@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-lorenzodreis@gmail.com-111111?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
@@ -10,7 +10,7 @@
 
 I'm a Python developer aiming at AI engineering, with one habit I can't shake: **I instrument everything.** An LLM feature that ships without a trace, a cost number and a way to check its answers isn't finished — it's a demo.
 
-Since 2026 I've been a research fellow at a robotics company, building Python backend services for observability and telemetry plus a Next.js frontend on a design system. On my own time I ship products end to end, from schema to deploy. I do my best work at night; off the keyboard, it's anime and manga.
+Since 2026 I've been a Python developer at a robotics company, building backend services for observability and telemetry plus a Next.js frontend on a design system. On my own time I ship products end to end, from schema to deploy. I do my best work at night; off the keyboard, it's anime and manga.
 
 <img src="assets/ch2.svg" alt="Chapter 2: Night Log" width="100%">
 
