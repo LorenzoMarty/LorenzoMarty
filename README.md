@@ -14,9 +14,9 @@ Since 2026 I've been a Python developer at **Qiron Robotics**, building observab
 
 <img src="assets/ch2.svg" alt="Chapter 2: Night Log" width="100%">
 
-<img src="assets/nightlog.svg" alt="Totals, a skyline of logged work sessions per month, and a star map with one star per day logged" width="100%">
+<img src="assets/nightlog.svg" alt="Active days, longest and current streak, a skyline of active days per month, and a star map with one star per active day" width="100%">
 
-*My commit graph only shows part of the story: much of my work lives in private and organization repositories, in design docs and in decisions. So I keep a dated log, one entry per work session. Each building is a month, each star a day I logged. \* month to date.*
+*Generated daily from my GitHub contribution calendar, with private repositories counted anonymously. Each building is a month of active days (dashed = month to date) and each star is a day with contributions.*
 
 <img src="assets/ch3.svg" alt="Chapter 3: Story Arcs" width="100%">
 
@@ -28,9 +28,8 @@ Since 2026 I've been a Python developer at **Qiron Robotics**, building observab
 | ○ | [**Transcripty**](https://github.com/LorenzoMarty/Transcripty) | Meeting recorder with transcription and automated summaries | Python · Streamlit · Whisper · LLM |
 | ◆ | **Qiron Robotics** | Robotics company where I work: observability and AI-cost telemetry, backend migration to async FastAPI + SQLAlchemy, robot data ingestion over MQTT | Python · FastAPI · SQLAlchemy · OpenTelemetry · Prometheus · Grafana · Loki · Tempo · MQTT · Next.js |
 | ⊘ | **NexaFit** | Fitness PWA: workout logging and body-evolution charts | Next.js 16 · Drizzle · Neon · Tailwind 4 |
-| ◌ | **RastroAI** | Investigative intelligence on Brazilian open public data | Python · Postgres · Neo4j |
 
-*● live · ◆ employer (code is not public) · ◐ client work · ○ public · ⊘ private · ◌ in design*
+*● live · ◆ employer (code is not public) · ◐ client work · ○ public · ⊘ private*
 
 <img src="assets/ch4.svg" alt="Chapter 4: Loadout" width="100%">
 
