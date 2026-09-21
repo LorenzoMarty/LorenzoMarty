@@ -1,7 +1,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Lorenzo Marty — AI & LLMOps engineer. Manga-style cover with a night skyline and one window still lit." width="100%"></p>
 
 <p align="center">
-  Santa Maria, Brazil · Internet Systems student at UFSM · Python developer at a robotics company<br>
+  Santa Maria, Brazil · Internet Systems student at UFSM · Python developer at Qiron Robotics<br>
   <a href="https://www.linkedin.com/in/lorenzo-marty/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-lorenzo--marty-111111?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="mailto:lorenzodreis@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-lorenzodreis@gmail.com-111111?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
@@ -10,7 +10,7 @@
 
 I'm a Python developer aiming at AI engineering, with one habit I can't shake: **I instrument everything.** An LLM feature that ships without a trace, a cost number and a way to check its answers isn't finished — it's a demo.
 
-Since 2026 I've been a Python developer at a robotics company, building backend services for observability and telemetry plus a Next.js frontend on a design system. On my own time I ship products end to end, from schema to deploy. I do my best work at night; off the keyboard, it's anime and manga.
+Since 2026 I've been a Python developer at **Qiron Robotics**, building observability and AI-telemetry services (OpenTelemetry, Prometheus, Grafana), taking part in the move of its backend from Django to async FastAPI and SQLAlchemy, and working on a Next.js frontend with a design system. On my own time I ship products end to end, from schema to deploy. I do my best work at night; off the keyboard, it's anime and manga.
 
 <img src="assets/ch2.svg" alt="Chapter 2: Night Log" width="100%">
 
@@ -26,10 +26,11 @@ Since 2026 I've been a Python developer at a robotics company, building backend 
 | ◐ | [**Agenda-Juri**](https://github.com/LorenzoMarty/Agenda-Juri) | Law-firm CRM: cases, deadlines, Google Calendar/Drive sync, AI meeting summaries | Django 6 · React 19 · Celery · Redis · Docker · GCP |
 | ○ | [**Oráculo Chatbot**](https://github.com/LorenzoMarty/Oraculo-Chatbot) | RAG chatbot over documents, websites and videos | Django · Agno · Qdrant |
 | ○ | [**Transcripty**](https://github.com/LorenzoMarty/Transcripty) | Meeting recorder with transcription and automated summaries | Python · Streamlit · Whisper · LLM |
+| ◆ | **Qiron Robotics** | Robotics company where I work: observability and AI-cost telemetry, backend migration to async FastAPI + SQLAlchemy, robot data ingestion over MQTT | Python · FastAPI · SQLAlchemy · OpenTelemetry · Prometheus · Grafana · Loki · Tempo · MQTT · Next.js |
 | ⊘ | **NexaFit** | Fitness PWA: workout logging and body-evolution charts | Next.js 16 · Drizzle · Neon · Tailwind 4 |
 | ◌ | **RastroAI** | Investigative intelligence on Brazilian open public data | Python · Postgres · Neo4j |
 
-*● live · ◐ client work · ○ public · ⊘ private · ◌ in design*
+*● live · ◆ employer (code is not public) · ◐ client work · ○ public · ⊘ private · ◌ in design*
 
 <img src="assets/ch4.svg" alt="Chapter 4: Loadout" width="100%">
 
