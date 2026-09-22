@@ -8,7 +8,6 @@ import collections
 import datetime as dt
 import html
 import json
-import math
 import os
 import pathlib
 import random
@@ -23,7 +22,6 @@ SANS = "'Segoe UI','Helvetica Neue',Arial,sans-serif"
 HEAVY = "Impact,'Arial Black','Helvetica Neue',sans-serif"
 MONO = "SFMono-Regular,Consolas,'Liberation Mono',monospace"
 MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
-WD = "Mon Tue Wed Thu Fri Sat Sun".split()
 
 DEFS = f"""<defs>
 <pattern id="tone" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1" fill="{INK}" fill-opacity=".22"/></pattern>
@@ -178,29 +176,43 @@ def nightlog():
         b += (f'<text x="{x+bw/2}" y="{base-h-6}" text-anchor="middle" font-family="{HEAVY}" font-size="12" font-style="italic" fill="#fff">{n}</text>'
               f'<text x="{x+bw/2}" y="{base+15}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#bbb">{MON[ym[1]-1]}</text>')
     b += f'<line x1="{bx+8}" y1="{base}" x2="{bx+310}" y2="{base}" stroke="#fff" stroke-opacity=".5"/>'
-    # C: contributions by weekday, one radial bar per day (night)
+    # C: pulse of the year, rolling 30-day active-day rate (night)
     cx = 597
     b += f'<rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="#242424" stroke="{INK}" stroke-width="3"/><rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="url(#nightTone)"/>'
-    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">CONTRIBUTIONS BY WEEKDAY</text>'
-    ccx, ccy, rmin, rmax = cx + 150, 138, 14, 74
-    wd_total = collections.Counter()
+    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">PULSE OF THE YEAR</text>'
+    x0, x1, top, base = cx + 16, cx + 289, 44, 205
+    n = len(days)
+    win, s, roll = collections.deque(), 0, []
     for d in days:
-        wd_total[d.weekday()] += cal[d]
-    peak = max(wd_total.values()) or 1
-    for frac in (.25, .5, .75, 1):
-        b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmin+frac*(rmax-rmin):.1f}" fill="none" stroke="#fff" stroke-opacity=".12"/>'
-    for k in range(7):
-        a = math.radians(k * 360 / 7 - 90)
-        r = rmin + wd_total[k] / peak * (rmax - rmin)
-        tx_, ty_ = ccx + r * math.cos(a), ccy + r * math.sin(a)
-        b += f'<line x1="{ccx}" y1="{ccy}" x2="{tx_:.1f}" y2="{ty_:.1f}" stroke="#fff" stroke-width="7" stroke-linecap="round"/>'
-        b += star4(tx_, ty_, 3.6, "#fff")
-        lx, ly = ccx + (rmax + 17) * math.cos(a), ccy + (rmax + 17) * math.sin(a)
-        b += f'<text x="{lx:.1f}" y="{ly+3:.1f}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#ccc">{WD[k].upper()}</text>'
-    busiest, quietest = max(wd_total, key=wd_total.get), min(wd_total, key=wd_total.get)
-    b += f'<text x="{cx+14}" y="{H-10}" font-family="{SANS}" font-size="8.5" fill="#bbb">busiest {WD[busiest]} · quietest {WD[quietest]}</text>'
+        win.append(1 if d in active_set else 0)
+        s += win[-1]
+        if len(win) > 30:
+            s -= win.popleft()
+        roll.append(s)
+    vmax = max(max(roll) * 1.15, 1)
+    xf = lambda i: x0 + (i / (n - 1) * (x1 - x0) if n > 1 else 0)
+    yf = lambda v: base - v / vmax * (base - top)
+    b += f'<line x1="{x0-6}" y1="{base}" x2="{x1+6}" y2="{base}" stroke="#fff" stroke-opacity=".5"/>'
+    b += f'<line x1="{x0-6}" y1="{(top+base)/2:.1f}" x2="{x1+6}" y2="{(top+base)/2:.1f}" stroke="#fff" stroke-opacity=".12"/>'
+    pts = " ".join(f"{xf(i):.1f},{yf(roll[i]):.1f}" for i in range(n))
+    b += f'<polygon points="{x0},{base} {pts} {x1},{base}" fill="#fff" fill-opacity=".08"/>'
+    b += f'<polyline points="{pts}" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>'
+    for i, d in enumerate(days):
+        if d.day == 1:
+            b += (f'<line x1="{xf(i):.1f}" y1="{base}" x2="{xf(i):.1f}" y2="{base+4}" stroke="#fff" stroke-opacity=".5"/>'
+                  f'<text x="{xf(i):.1f}" y="{base+15}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#bbb">{MON[d.month-1]}</text>')
+    peak_i = max(range(n), key=lambda i: (roll[i], i))
+    peak_val, peak_date = roll[peak_i], days[peak_i]
+    px_, py_ = xf(peak_i), yf(peak_val)
+    lx = min(max(px_, x0 + 16), x1 - 16)
+    b += star4(px_, py_, 3.4, "#fff")
+    b += f'<text x="{lx:.1f}" y="{py_-9:.1f}" text-anchor="middle" font-family="{HEAVY}" font-style="italic" font-size="13" fill="#fff">{peak_val}</text>'
+    now_val = roll[-1]
+    nx, ny = xf(n - 1), yf(now_val)
+    b += f'<circle cx="{nx:.1f}" cy="{ny:.1f}" r="4.5" fill="none" stroke="#fff" stroke-width="1.1"/>'
+    b += f'<text x="{cx+14}" y="{H-10}" font-family="{SANS}" font-size="8.5" fill="#bbb">{now_val}/30 active days now · peaked {peak_val}/30 in {MON[peak_date.month-1]}</text>'
     b += f'<text x="255" y="{H-8}" text-anchor="end" font-family="{MONO}" font-size="8.5" fill="{GREY}">UPDATED {TODAY.isoformat()}</text>'
-    return svg(W, H, b, f"Active days, a monthly skyline of active days, and contributions by weekday as radial bars — busiest {WD[busiest]}, quietest {WD[quietest]}")
+    return svg(W, H, b, f"Active days, a monthly skyline of active days, and a rolling 30-day pulse of active-day rate through the year — now {now_val} of 30, peaked at {peak_val} of 30 in {MON[peak_date.month-1]}")
 
 
 OUT.mkdir(exist_ok=True)

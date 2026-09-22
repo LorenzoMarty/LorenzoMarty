@@ -14,9 +14,9 @@ Since 2026 I've been a Python developer at **Qiron Robotics**, building observab
 
 <img src="assets/ch2.svg" alt="Chapter 2: Night Log" width="100%">
 
-<img src="assets/nightlog.svg" alt="Active days, longest and current streak, a skyline of active days per month, and contributions by weekday as radial bars" width="100%">
+<img src="assets/nightlog.svg" alt="Active days, longest and current streak, a skyline of active days per month, and a rolling 30-day pulse of active-day rate through the year" width="100%">
 
-*Generated daily from my GitHub contribution calendar, with private repositories counted anonymously. Each building is a month of active days (dashed = month to date) and each spoke is a weekday, sized by its total contributions.*
+*Generated daily from my GitHub contribution calendar, with private repositories counted anonymously. Each building is a month of active days (dashed = month to date) and the pulse is a rolling 30-day active-day rate, peak and current position marked.*
 
 <img src="assets/ch3.svg" alt="Chapter 3: Story Arcs" width="100%">
 
