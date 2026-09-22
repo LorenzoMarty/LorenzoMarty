@@ -23,6 +23,7 @@ SANS = "'Segoe UI','Helvetica Neue',Arial,sans-serif"
 HEAVY = "Impact,'Arial Black','Helvetica Neue',sans-serif"
 MONO = "SFMono-Regular,Consolas,'Liberation Mono',monospace"
 MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+WD = "Mon Tue Wed Thu Fri Sat Sun".split()
 
 DEFS = f"""<defs>
 <pattern id="tone" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1" fill="{INK}" fill-opacity=".22"/></pattern>
@@ -177,39 +178,29 @@ def nightlog():
         b += (f'<text x="{x+bw/2}" y="{base-h-6}" text-anchor="middle" font-family="{HEAVY}" font-size="12" font-style="italic" fill="#fff">{n}</text>'
               f'<text x="{x+bw/2}" y="{base+15}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#bbb">{MON[ym[1]-1]}</text>')
     b += f'<line x1="{bx+8}" y1="{base}" x2="{bx+310}" y2="{base}" stroke="#fff" stroke-opacity=".5"/>'
-    # C: spiral of the year, one arm per weekday, time grows outward (night)
+    # C: contributions by weekday, one radial bar per day (night)
     cx = 597
     b += f'<rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="#242424" stroke="{INK}" stroke-width="3"/><rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="url(#nightTone)"/>'
-    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">SPIRAL OF THE YEAR</text>'
-    ccx, ccy, rmin, rmax = cx + 151, 133, 9, 90
-    total = (TODAY - first).days + 1
-    tier = lambda c: 1 if c == 1 else 2 if c <= 5 else 3 if c <= 15 else 4
-
-    def spot(i):
-        t = i / (total - 1) if total > 1 else 1
-        r = rmin + t * (rmax - rmin)
-        a = math.radians(i * (360 / 7) - 90)
-        return ccx + r * math.cos(a), ccy + r * math.sin(a)
-
-    b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmax}" fill="none" stroke="#fff" stroke-opacity=".22"/>'
-    b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmin}" fill="none" stroke="#fff" stroke-opacity=".3"/>'
-    for wd in range(7):
-        ax = ccx + rmax * math.cos(math.radians(wd * 360 / 7 - 90))
-        ay = ccy + rmax * math.sin(math.radians(wd * 360 / 7 - 90))
-        b += f'<line x1="{ccx}" y1="{ccy}" x2="{ax:.1f}" y2="{ay:.1f}" stroke="#fff" stroke-opacity=".08"/>'
-    for i in range(total):
-        d = first + dt.timedelta(days=i)
-        x, y = spot(i)
-        c = cal.get(d, 0)
-        if c:
-            b += star4(x, y, 1.1 + tier(c) * 0.95, "#fff")
-        else:
-            b += f'<circle cx="{x:.1f}" cy="{y:.1f}" r=".6" fill="#fff" fill-opacity=".28"/>'
-    tx, ty = spot(total - 1)
-    b += f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="6.5" fill="none" stroke="#fff" stroke-width="1.1"/>'
-    b += f'<text x="{cx+14}" y="{H-10}" font-family="{SANS}" font-size="8.5" fill="#bbb">each arm a weekday, size a day\'s contributions, ring the latest</text>'
+    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">CONTRIBUTIONS BY WEEKDAY</text>'
+    ccx, ccy, rmin, rmax = cx + 150, 138, 14, 74
+    wd_total = collections.Counter()
+    for d in days:
+        wd_total[d.weekday()] += cal[d]
+    peak = max(wd_total.values()) or 1
+    for frac in (.25, .5, .75, 1):
+        b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmin+frac*(rmax-rmin):.1f}" fill="none" stroke="#fff" stroke-opacity=".12"/>'
+    for k in range(7):
+        a = math.radians(k * 360 / 7 - 90)
+        r = rmin + wd_total[k] / peak * (rmax - rmin)
+        tx_, ty_ = ccx + r * math.cos(a), ccy + r * math.sin(a)
+        b += f'<line x1="{ccx}" y1="{ccy}" x2="{tx_:.1f}" y2="{ty_:.1f}" stroke="#fff" stroke-width="7" stroke-linecap="round"/>'
+        b += star4(tx_, ty_, 3.6, "#fff")
+        lx, ly = ccx + (rmax + 17) * math.cos(a), ccy + (rmax + 17) * math.sin(a)
+        b += f'<text x="{lx:.1f}" y="{ly+3:.1f}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#ccc">{WD[k].upper()}</text>'
+    busiest, quietest = max(wd_total, key=wd_total.get), min(wd_total, key=wd_total.get)
+    b += f'<text x="{cx+14}" y="{H-10}" font-family="{SANS}" font-size="8.5" fill="#bbb">busiest {WD[busiest]} · quietest {WD[quietest]}</text>'
     b += f'<text x="255" y="{H-8}" text-anchor="end" font-family="{MONO}" font-size="8.5" fill="{GREY}">UPDATED {TODAY.isoformat()}</text>'
-    return svg(W, H, b, "Active days, a monthly skyline of active days and a spiral of the year with one arm per weekday, sized by contributions, from my GitHub contributions")
+    return svg(W, H, b, f"Active days, a monthly skyline of active days, and contributions by weekday as radial bars — busiest {WD[busiest]}, quietest {WD[quietest]}")
 
 
 OUT.mkdir(exist_ok=True)
