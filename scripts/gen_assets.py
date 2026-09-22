@@ -8,6 +8,7 @@ import collections
 import datetime as dt
 import html
 import json
+import math
 import os
 import pathlib
 import random
@@ -176,26 +177,39 @@ def nightlog():
         b += (f'<text x="{x+bw/2}" y="{base-h-6}" text-anchor="middle" font-family="{HEAVY}" font-size="12" font-style="italic" fill="#fff">{n}</text>'
               f'<text x="{x+bw/2}" y="{base+15}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="#bbb">{MON[ym[1]-1]}</text>')
     b += f'<line x1="{bx+8}" y1="{base}" x2="{bx+310}" y2="{base}" stroke="#fff" stroke-opacity=".5"/>'
-    # C: star map, one star per active day (night)
+    # C: spiral of the year, one arm per weekday, time grows outward (night)
     cx = 597
     b += f'<rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="#242424" stroke="{INK}" stroke-width="3"/><rect x="{cx}" y="1.5" width="301.5" height="{H-3}" fill="url(#nightTone)"/>'
-    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">ONE STAR = ONE ACTIVE DAY</text>'
-    span, x0, x1, top = (TODAY - first).days, cx + 18, cx + 284, 56
-    px = lambda d: x0 + (d - first).days / span * (x1 - x0)
+    b += f'<text x="{cx+14}" y="24" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="#fff">SPIRAL OF THE YEAR</text>'
+    ccx, ccy, rmin, rmax = cx + 151, 133, 9, 90
+    total = (TODAY - first).days + 1
     tier = lambda c: 1 if c == 1 else 2 if c <= 5 else 3 if c <= 15 else 4
-    py = lambda d: base - tier(cal[d]) * (base - top) / 4.5 + (d.toordinal() * 37 % 7 - 3)
-    b += f'<line x1="{x0-8}" y1="{base}" x2="{x1+8}" y2="{base}" stroke="#fff" stroke-opacity=".5"/>'
-    b += f'<polyline points="{" ".join(f"{px(d):.1f},{py(d):.1f}" for d in active)}" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1" stroke-dasharray="2 3"/>'
-    for k in range(span + 1):
-        d = first + dt.timedelta(days=k)
-        if d not in active_set:
-            b += f'<circle cx="{px(d):.1f}" cy="{base}" r=".8" fill="#888"/>'
-        if d.day == 1:
-            b += f'<text x="{px(d):.0f}" y="{base+15}" font-family="{MONO}" font-size="9" fill="#bbb">{MON[d.month-1]}</text>'
-    for d in active:
-        b += star4(px(d), py(d), 1.3 + tier(cal[d]) * 0.85, "#fff")
+
+    def spot(i):
+        t = i / (total - 1) if total > 1 else 1
+        r = rmin + t * (rmax - rmin)
+        a = math.radians(i * (360 / 7) - 90)
+        return ccx + r * math.cos(a), ccy + r * math.sin(a)
+
+    b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmax}" fill="none" stroke="#fff" stroke-opacity=".22"/>'
+    b += f'<circle cx="{ccx}" cy="{ccy}" r="{rmin}" fill="none" stroke="#fff" stroke-opacity=".3"/>'
+    for wd in range(7):
+        ax = ccx + rmax * math.cos(math.radians(wd * 360 / 7 - 90))
+        ay = ccy + rmax * math.sin(math.radians(wd * 360 / 7 - 90))
+        b += f'<line x1="{ccx}" y1="{ccy}" x2="{ax:.1f}" y2="{ay:.1f}" stroke="#fff" stroke-opacity=".08"/>'
+    for i in range(total):
+        d = first + dt.timedelta(days=i)
+        x, y = spot(i)
+        c = cal.get(d, 0)
+        if c:
+            b += star4(x, y, 1.1 + tier(c) * 0.95, "#fff")
+        else:
+            b += f'<circle cx="{x:.1f}" cy="{y:.1f}" r=".6" fill="#fff" fill-opacity=".28"/>'
+    tx, ty = spot(total - 1)
+    b += f'<circle cx="{tx:.1f}" cy="{ty:.1f}" r="6.5" fill="none" stroke="#fff" stroke-width="1.1"/>'
+    b += f'<text x="{cx+14}" y="{H-10}" font-family="{SANS}" font-size="8.5" fill="#bbb">each arm a weekday, size a day\'s contributions, ring the latest</text>'
     b += f'<text x="255" y="{H-8}" text-anchor="end" font-family="{MONO}" font-size="8.5" fill="{GREY}">UPDATED {TODAY.isoformat()}</text>'
-    return svg(W, H, b, "Active days, a monthly skyline of active days and a star map with one star per active day, from my GitHub contributions")
+    return svg(W, H, b, "Active days, a monthly skyline of active days and a spiral of the year with one arm per weekday, sized by contributions, from my GitHub contributions")
 
 
 OUT.mkdir(exist_ok=True)
