@@ -23,13 +23,14 @@ Since 2026 I've been a Python developer at **Qiron Robotics**, building observab
 | | Arc | What it does | Stack |
 |:-:|---|---|---|
 | ● | [**Donc**](https://github.com/LorenzoMarty/Donc) · [app](https://app-redacao-five.vercel.app) | ENEM essay platform: pipeline of specialized LLM agents, RAG, gamified cognitive trainer | Next.js 16 · FastAPI · Postgres + pgvector · Celery · agno · OpenAI · Langfuse |
+| ● | [**Estoque NY**](https://github.com/LorenzoMarty/Estoque-NY) · [app](https://estoque-ny.vercel.app) | Inventory management API and admin frontend for a multi-branch retail business: stock and transfers between branches, role-based access | FastAPI · async SQLAlchemy 2.0 · PostgreSQL · React 19 · JWT |
+| ● | [**Catálogo NY**](https://github.com/LorenzoMarty/Catalogo-NY) · [app](https://catalogo-ny.vercel.app) | Institutional site and searchable product catalog for a multi-branch perfumery retailer, with a parallax hero and smooth scroll | React 19 · TypeScript · Vite · Framer Motion · Lenis |
 | ◐ | [**Agenda-Juri**](https://github.com/LorenzoMarty/Agenda-Juri) | Law-firm CRM: cases, deadlines, Google Calendar/Drive sync, AI meeting summaries | Django 6 · React 19 · Celery · Redis · Docker · GCP |
 | ○ | [**Oráculo Chatbot**](https://github.com/LorenzoMarty/Oraculo-Chatbot) | RAG chatbot over documents, websites and videos | Django · Agno · Qdrant |
 | ○ | [**Transcripty**](https://github.com/LorenzoMarty/Transcripty) | Meeting recorder with transcription and automated summaries | Python · Streamlit · Whisper · LLM |
 | ◆ | **Qiron Robotics** | Robotics company where I work: observability and AI-cost telemetry, backend migration to async FastAPI + SQLAlchemy, robot data ingestion over MQTT | Python · FastAPI · SQLAlchemy · OpenTelemetry · Prometheus · Grafana · Loki · Tempo · MQTT · Next.js |
-| ⊘ | **NexaFit** | Fitness PWA: workout logging and body-evolution charts | Next.js 16 · Drizzle · Neon · Tailwind 4 |
 
-*● live · ◆ employer (code is not public) · ◐ client work · ○ public · ⊘ private*
+*● live · ◆ employer (code is not public) · ◐ client work · ○ public*
 
 <img src="assets/ch4.svg" alt="Chapter 4: Loadout" width="100%">
 
