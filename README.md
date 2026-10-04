@@ -1,7 +1,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Lorenzo Marty — AI & LLMOps engineer. Manga-style cover with a night skyline and one window still lit." width="100%"></p>
 
 <p align="center">
-  Santa Maria, Brazil · Internet Systems student at UFSM · Python developer at Qiron Robotics<br>
+  Itaqui, Brazil · Internet Systems student at UFSM · Python developer at Qiron Robotics<br>
   <a href="https://www.linkedin.com/in/lorenzo-marty/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-lorenzo--marty-111111?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="mailto:lorenzodreis@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-lorenzodreis@gmail.com-111111?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
